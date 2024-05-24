@@ -1,0 +1,47 @@
+@startuml name
+title Banka
+abstract class Insan{
+    -tc:int
+    -ad:String
+    -soyad:String
+    -meslek:String
+    -yas:int
+    --
+    +getTc():int
+    +setTc(tc:int)
+    +getAd():string
+    +setAd(ad:string)
+    +getMeslek():string
+    +setMeslek(meslek:string)
+    +getYas():int
+    +setYas(yas:int)
+}
+
+class Musteri extends Insan {
+    -bakiye:int
+    -iban:string
+    --
+    +getBakiye():int
+    +setBakiye(bakiye:int)
+    +getIban():string
+    +setIban(iban:string)
+}
+
+class Atm{
+    -toplamPara:int
+    --
+    +getToplamPara():int
+    +setToplamPara(toplamPara:int)
+}
+
+interface ParaIslem{
+    + {abstract} paraCek()
+    + {abstract} paraYatir()
+    + {abstract} odeme()
+}
+
+ParaIslem <|..  Musteri
+ParaIslem <|.. Atm
+
+hide empty members
+@enduml

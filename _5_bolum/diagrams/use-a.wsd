@@ -1,0 +1,22 @@
+@startuml name
+title use-a
+
+class Engine{
+    +start():void
+    +stop():void
+}
+
+class Car{
+    -engine:Engine
+    --
+    +Car()
+    +start():void
+    +stop():void
+}
+
+Car "uses" --> Engine 
+' car kullanır Engine'
+
+
+hide empty members  
+@enduml

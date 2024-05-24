@@ -1,0 +1,26 @@
+@startuml name
+title is-a-party-of
+class Car{
+    -wheels: List<Wheel>
+    -passengers: List<Passenger>
+    --
+    +Car()
+    +addWheel(wheel: Wheel): void
+}
+
+class Wheel{
+    +size: int
+    --
+    +Wheel(size: int)
+}
+
+class Passenger{
+    +firstName
+    +lastName
+}
+
+Car "constains  " *-down- Wheel
+Car "has" o-down- Passenger : 0..5
+
+hide empty members
+@enduml

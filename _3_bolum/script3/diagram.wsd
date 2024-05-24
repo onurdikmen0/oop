@@ -1,0 +1,32 @@
+@startuml Instrument
+title Interface Example
+interface IInstrument{
+    +play()
+}
+interface IElectronicInstrument{
+    +tune()
+}
+interface IKeyboardInstrument{
+    +press()
+}
+class Guitar {
+    +play()
+}
+class Piano {
+    +play()
+}
+
+class Orchestra{
+    -intruments : IInstrument[]
+    ---
+    playAll()
+}
+
+Guitar .up-|> IInstrument : <<implements>>
+Guitar .up-|> IElectronicInstrument : <<implements>>
+
+Piano .up-|> IInstrument : <<implements>>
+Piano .up-|> IKeyboardInstrument : <<implements>>
+
+hide empty members
+@enduml

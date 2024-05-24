@@ -1,0 +1,29 @@
+@startuml sablon
+title Taş Kağıt Makas Oyunu
+abstract class Player{
+    -name:String   
+    -score:int
+    --
+    +getName()
+    +getScore()
+    +chooseMove()
+}
+
+abstract class ComputerPlayer {
+    -name:String   
+    --
+    +getName()
+    +getScore()
+    +chooseMove()
+}
+
+class HumanPlayer extends Player{ 
+
+}
+
+class RandomComputerPlayer extends ComputerPlayer {
+
+}
+
+hide empty member
+@enduml

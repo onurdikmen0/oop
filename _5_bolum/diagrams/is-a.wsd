@@ -1,0 +1,19 @@
+@startuml name
+title is-a
+class Animal{
+    +name:String
+    +makeSound():String
+}
+
+class Dog{
+    +makeSound():String
+}
+
+class Cat{
+    +makeSound():String
+}
+
+Animal <|-down- Dog : <<extends>> 
+Animal <|-down- Cat : <<extends>>
+hide empty members
+@enduml

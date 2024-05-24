@@ -1,0 +1,19 @@
+@startuml Book Diagram
+title Book Model
+class Book{
+    -name
+    -page
+    -author
+    --
+    +getName
+    +getPage
+    +getAuthor
+    --
+    +setName(value)
+    +setPage(value)
+    +setAuthor(value)
+    --
+    Book(name, page, author)
+}
+
+@enduml

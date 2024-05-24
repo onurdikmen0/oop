@@ -1,0 +1,25 @@
+@startuml uygulama
+class Person{
+    - name: String
+    - age: int
+    --
+    # toString()
+}
+class Student extends Person{
+    - name: String
+    - age: int
+    - studentNumber: int
+    --
+    # toString()
+}
+
+class Teacher extends Person{
+    - name: String
+    - age: int
+    - branch: String
+    --
+    # toString()
+}
+
+
+@enduml

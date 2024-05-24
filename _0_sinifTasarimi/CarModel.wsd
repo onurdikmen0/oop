@@ -1,0 +1,14 @@
+@startuml ornek
+title Car Model
+class Car{
+    +manufacturer:String
+    +model:String
+    +year:int
+    +color:String
+    +activateWipers(speed):void
+    +openSunRoof():void
+    +playRadio(station:String):void
+    +drive():void
+    +stop():void
+}
+@enduml

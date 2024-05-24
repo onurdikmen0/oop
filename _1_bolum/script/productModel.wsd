@@ -1,0 +1,23 @@
+@startuml Class Diagram
+title Product Model
+class Product{
+    -name
+    -price
+    -quantity
+    --
+    +getName()
+    +getPrice()
+    +getQuantity()
+    --
+    +setName(value)
+    +setPrice(value)
+    +setQuantity(value)
+    --
+    +Product(name, price, quantity)
+    --
+    +get_total_price()
+}
+
+Product -up-|> Object : "<<extends>>"
+hide empty members
+@enduml

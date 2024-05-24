@@ -1,0 +1,46 @@
+@startuml Not Inheritance 
+title Vehicle
+
+class Car{
+    -manufacturer : String 
+    -year : int
+    -color : String
+    +start()
+    +stop()
+    +drive()
+    +openSunroof()
+    
+}
+class Truck{
+    -manufacturer : String
+    -year : int
+    -color : String
+    +start()
+    +stop()
+    +drive()
+    +transport()
+}
+
+class Bus{
+    -manufacturer : String
+    -year : int
+    -color : String
+    +start()
+    +stop()
+    +drive()
+    +scheduling()
+}
+
+class SchoolBus{
+    -manufacturer : String
+    -year : int
+    -color : String
+    +start()
+    +stop()
+    +drive()
+    +getFare()
+    
+}
+
+hide empty member
+@enduml
